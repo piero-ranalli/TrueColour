@@ -5,7 +5,7 @@
 
  lupton.pl
 
- True colour images with non-linear scaling after Lupton et al. (2004), PASP
+ True colour images with non-linear scaling after Lupton et al. (2004), PASP 116, 133.
 
  use: ./lupton.pl red.fits green.fits blue.fits truecolour.fits
 
@@ -58,6 +58,7 @@ use PDL::NiceSlice;
 #use PDL::IO::Pic;
 use Astro::FITS::Header;  # Otherwise makes a mess in the output image header
 
+
 # COLOUR SCALING PARAMETERS
 %scale = ( r => 2.2, 
 	   g => 1.6, 
@@ -105,7 +106,7 @@ $verde->inplace->badmask(0);
 $blu->inplace->badmask(0);
 
 
- # BACKGROUND SUPPRESSION IS HERE
+# BACKGROUND SUPPRESSION
 $rosso=comprimibkg($rosso,2,4);
 $verde=comprimibkg($verde,2,4);
 $blu=  comprimibkg($blu,2,4);

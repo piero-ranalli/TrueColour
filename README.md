@@ -1,6 +1,6 @@
 # lupton.pl
 
-True colour images with non-linear scaling after Lupton et al. (2004), PASP
+True colour images with non-linear scaling after Lupton et al. (2004), PASP 116, 133.
 
 use:
 

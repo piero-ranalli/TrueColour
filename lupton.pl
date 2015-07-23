@@ -55,7 +55,7 @@
 
 use PDL;
 use PDL::NiceSlice;
-use PDL::IO::Pic;
+#use PDL::IO::Pic;
 use Astro::FITS::Header;  # Otherwise makes a mess in the output image header
 
 # COLOUR SCALING PARAMETERS
@@ -203,10 +203,10 @@ wfits $arcobaleno,$fitsoutput;
 
 # true colour file output: first rearrange dimensions, from three planes
 # of r/g/b images, to 2D matrix where each element is a vector:
-$arcobaleno = $arcobaleno->reorder(2,0,1);
+# $arcobaleno = $arcobaleno->reorder(2,0,1);
 
 # then output
-wpic $arcobaleno,$fileoutput;
+# wpic $arcobaleno,$fileoutput;
 
 
 
